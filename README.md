@@ -4,4 +4,4 @@
 https://materilio.firebaseapp.com/
 
 ##GitHub
-officiallygod.github.io/materilio/.
+https://officiallygod.github.io/materilio/
