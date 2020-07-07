@@ -55,36 +55,6 @@
   </head>
 
   <body>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyDlkqiM3w6o5r9sHVF1cBx5qkca_7wWlFs",
-        authDomain: "materilio.firebaseapp.com",
-        databaseURL: "https://materilio.firebaseio.com",
-        projectId: "materilio",
-        storageBucket: "materilio.appspot.com",
-        messagingSenderId: "624734437087",
-        appId: "1:624734437087:web:b892042a97aa9d120bb36a",
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-
-      function writeUserData() {
-        firebase
-          .database()
-          .ref("users/" + userId)
-          .set({
-            username: document.getElementById("name"),
-            useremail: document.getElementById("email"),
-          });
-      }
-    </script>
     <!-- Navbar -->
     <nav class="navbar">
       <div class="navbar__inner">
