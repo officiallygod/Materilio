@@ -1,0 +1,109 @@
+.skill-card {
+    width: 100%;
+    padding: 1.25rem;
+    margin: 0 auto;
+    background-image: linear-gradient(to right bottom,
+            rgba($color-header-primary-2, 0.9),
+            rgba($color-header-secondary-2, 0.9));
+    box-shadow: 0 2rem 6rem rgba($color-black, $alpha: 0.5);
+    border-radius: 1rem;
+    transition: all 0.3s ease-in;
+
+    &__heading {
+        color: $color-white;
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-top: 1.5rem;
+        text-align: center;
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.8rem;
+    }
+
+    &__skillbar {
+        width: 100%;
+        margin: 2rem 0;
+
+        &-p {
+            color: $color-grey-light-1;
+            font-family: 'Raleway', sans-serif;
+            text-transform: uppercase;
+            margin: 0 0.5rem 1rem;
+            letter-spacing: 0.3rem;
+        }
+
+        &-p:nth-child(2) {
+            float: right;
+            position: relative;
+            top: -3rem;
+
+            @include clearfix;
+        }
+
+        &--percentage {
+            background: $color-white;
+            padding: 0.4rem;
+            border: 1px solid $color-header-primary-4;
+            border-radius: 0.6rem;
+
+            &--level-1 {
+                background-image: linear-gradient(to right bottom,
+                        $color-header-primary-2,
+                        $color-header-secondary-2);
+                width: 0;
+                height: 1rem;
+                border-radius: 0.6rem;
+
+                backface-visibility: hidden;
+                // animation: one-skill 3s ease-in;
+                // animation-fill-mode: forwards;
+            }
+
+            &--level-2 {
+                background-image: linear-gradient(to right bottom,
+                        $color-header-primary-2,
+                        $color-header-secondary-2);
+                width: 0;
+                height: 1rem;
+                border-radius: 0.6rem;
+
+                backface-visibility: hidden;
+                // animation: two-skill 5s ease-in;
+                // animation-fill-mode: forwards;
+            }
+
+            &--level-3 {
+                background-image: linear-gradient(to right bottom,
+                        $color-header-primary-2,
+                        $color-header-secondary-2);
+                width: 0;
+                height: 1rem;
+                border-radius: 0.6rem;
+
+                backface-visibility: hidden;
+                // animation: three-skill 2s ease-in;
+                // animation-fill-mode: forwards;
+            }
+        }
+    }
+
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+}
+
+.anim-skill-1 {
+    animation: one-skill 2s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.anim-skill-2 {
+    animation: two-skill 3s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.anim-skill-3 {
+    animation: three-skill 1s ease-in;
+    animation-fill-mode: forwards;
+}

@@ -1,0 +1,137 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $color-grey-dark;
+  box-sizing: border-box;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+
+  backface-visibility: hidden;
+  margin-bottom: 12rem;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    font-family: "bauer", sans-serif;
+    letter-spacing: 4rem;
+
+    @include respond(phone) {
+      font-size: 5rem;
+      letter-spacing: 1rem;
+    }
+  }
+}
+
+.heading-secondary {
+
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: 'aileronsregular';
+  letter-spacing: 0.35rem;
+  background-image: linear-gradient(to right top,
+      $color-header-primary-2,
+      $color-header-secondary-2);
+
+  text-shadow: 0 1rem 4rem rgba($color: #000000, $alpha: .5);
+
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all .2s;
+  margin-bottom: 5rem;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($color: #000000, $alpha: .2);
+  }
+
+}
+
+.heading-secondary-2 {
+
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: $color-white;
+  font-family: 'aileronsregular';
+  letter-spacing: 0.35rem;
+  text-shadow: 0 1rem 4rem rgba($color: #000000, $alpha: .8);
+
+  display: inline-block;
+  transition: all .2s;
+  margin-bottom: 5rem;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($color: #000000, $alpha: .2);
+  }
+
+}
+
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.heading-tertiary-1 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: $color-white;
+  text-transform: uppercase;
+}
+
+.heading-tertiary-2 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: $color-black;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+
+.paragraph-1 {
+  color: $color-grey-light-1;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.paragraph-2 {
+  color: $color-grey-dark-3;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
