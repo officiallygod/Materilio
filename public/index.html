@@ -1,612 +1,502 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway:400,200"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
+  <base href="https://materilio-allen.firebaseapp.com/">
 
-    <link rel="stylesheet" href="css/aileronsregular.css" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,200" rel="stylesheet" />
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
-    />
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="css/aileronsregular.css" />
 
-    <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="img/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="img/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="img/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- <link rel="stylesheet" href="sass/main.css" /> -->
 
-    <script src="js/script.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 
-    <title>Materilio | Designed by Allen Benny</title>
-  </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <body>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+  <script src="js/script.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
+  <title>Materilio | Designed by Allen Benny</title>
+</head>
 
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyDlkqiM3w6o5r9sHVF1cBx5qkca_7wWlFs",
-        authDomain: "materilio.firebaseapp.com",
-        databaseURL: "https://materilio.firebaseio.com",
-        projectId: "materilio",
-        storageBucket: "materilio.appspot.com",
-        messagingSenderId: "624734437087",
-        appId: "1:624734437087:web:b892042a97aa9d120bb36a",
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
+<body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
 
-      function writeUserData() {
-        firebase
-          .database()
-          .ref("users/" + userId)
-          .set({
-            username: document.getElementById("name"),
-            useremail: document.getElementById("email"),
-          });
-      }
-    </script>
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="navbar__inner">
-        <!-- Website Logo -->
-        <div class="navbar__inner__logo-box">
-          <img
-            src="img/logo_small.png"
-            alt="Logo"
-            class="navbar__inner__logo"
-          />
-        </div>
-        <!-- Three bar Menu for Navbar -->
-        <button class="navbar__inner--menu-toggler">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <!-- Navigation Options -->
-        <div class="navbar__inner--menu">
-          <a href="#" class="navbar__inner--menu--link">Home</a>
-          <a href="#section-about" class="navbar__inner--menu--link"
-            >About Me</a
-          >
-          <a href="#section-skills" class="navbar__inner--menu--link">Skills</a>
-          <a href="#section-work" class="navbar__inner--menu--link">My Work</a>
-          <a href="#section-stories" class="navbar__inner--menu--link"
-            >Stories</a
-          >
-          <a href="#section-book" class="navbar__inner--menu--link"
-            >Contact Me</a
-          >
-        </div>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDlkqiM3w6o5r9sHVF1cBx5qkca_7wWlFs",
+      authDomain: "materilio.firebaseapp.com",
+      databaseURL: "https://materilio.firebaseio.com",
+      projectId: "materilio",
+      storageBucket: "materilio.appspot.com",
+      messagingSenderId: "624734437087",
+      appId: "1:624734437087:web:b892042a97aa9d120bb36a",
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    function writeUserData() {
+      firebase
+        .database()
+        .ref("users/" + userId)
+        .set({
+          username: document.getElementById("name"),
+          useremail: document.getElementById("email"),
+        });
+    }
+  </script>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar__inner">
+      <!-- Website Logo -->
+      <div class="navbar__inner__logo-box">
+        <img src="img/logo_small.png" alt="Logo" class="navbar__inner__logo" />
       </div>
-    </nav>
-    <!-- Social Icons Side -->
-    <nav class="social">
-      <ul class="social-ul">
-        <li class="social-li">
-          <a
-            href="https://twitter.com/itsmeallenbenny"
-            class="social-button--side"
-            >Twitter<i class="fa fa-twitter"></i>
-          </a>
-        </li>
-        <li class="social-li">
-          <a href="https://github.com/officiallygod" class="social-button--side"
-            >Github<i class="fa fa-github"></i>
-          </a>
-        </li>
-        <li class="social-li">
-          <a
-            href="https://in.linkedin.com/in/allen-benny-863729169"
-            class="social-button--side"
-            >Linkedin<i class="fa fa-linkedin"></i>
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Header Section -->
-    <header class="header">
-      <!-- Website Main Info -->
-      <div class="header__text-box u-margin-top">
-        <h1 class="heading-primary">
-          <span class="heading-primary--main">Materilio</span>
-
-          <div class="neon">
-            <div class="neon-text--1">Material</div>
-            <div class="neon-text--3">&nbsp;+&nbsp;</div>
-            <div class="neon-text--2">Portfolio</div>
-          </div>
-        </h1>
+      <!-- Three bar Menu for Navbar -->
+      <button class="navbar__inner--menu-toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <!-- Navigation Options -->
+      <div class="navbar__inner--menu">
+        <a href="#" class="navbar__inner--menu--link">Home</a>
+        <a href="#section-about" class="navbar__inner--menu--link">About Me</a>
+        <a href="#section-skills" class="navbar__inner--menu--link">Skills</a>
+        <a href="#section-work" class="navbar__inner--menu--link">My Work</a>
+        <a href="#section-stories" class="navbar__inner--menu--link">Stories</a>
+        <a href="#section-book" class="navbar__inner--menu--link">Contact Me</a>
       </div>
-    </header>
+    </div>
+  </nav>
+  <!-- Social Icons Side -->
+  <nav class="social">
+    <ul class="social-ul">
+      <li class="social-li">
+        <a href="https://twitter.com/itsmeallenbenny" class="social-button--side">Twitter<i class="fa fa-twitter"></i>
+        </a>
+      </li>
+      <li class="social-li">
+        <a href="https://github.com/officiallygod" class="social-button--side">Github<i class="fa fa-github"></i>
+        </a>
+      </li>
+      <li class="social-li">
+        <a href="https://in.linkedin.com/in/allen-benny-863729169" class="social-button--side">Linkedin<i
+            class="fa fa-linkedin"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-    <main>
-      <section class="section-about" id="section-about">
-        <div class="u-center-text u-margin-bottom-big">
-          <h2 class="heading-secondary">
-            What do i actually do ?
-          </h2>
+  <!-- Header Section -->
+  <header class="header">
+    <!-- Website Main Info -->
+    <div class="header__text-box u-margin-top">
+      <h1 class="heading-primary">
+        <span class="heading-primary--main">Materilio</span>
+
+        <div class="neon">
+          <div class="neon-text--1">Material</div>
+          <div class="neon-text--3">&nbsp;+&nbsp;</div>
+          <div class="neon-text--2">Portfolio</div>
         </div>
+      </h1>
+    </div>
+  </header>
 
-        <div class="row">
-          <div class="col-1-of-2">
-            <h3 class="heading-tertiary u-margin-bottom-small">
-              You're going to fall in love with my work
-            </h3>
-            <p class="paragraph">
-              I usually call myself an <strong>ardent learner</strong>, (not bragging) but i do love to learn new things, I don&#39;t want my any day to go without learning something new, even though it&#39;s one small thing, this spirit of mine helps me to keep going and <strong>excel in everything</strong>.
-            </p>
-            <!-- <h3 class="heading-tertiary u-margin-bottom-small">I am someone you wish you never met you'll fall for me</h3> -->
-            <p class="paragraph">
-              I usaully make Apps for mobile phones whether it be <strong>iOS or Android</strong> I can make Apps for them. I am well versed with Native Java Android Development and Flutter. The other thing which interests me would be Food, Yes I am a Foodie and trust me I can <strong>COOK</strong> XD. As I always say I am <strong>&#34;Imperfectly Perfect&#34;</strong>.
-            </p>
-            <!-- <a href="#" class="btn-text">Learn more &rarr;</a> -->
-            <div class="btn-wrapper">
-              <a href="https://androidoverdoze.blogspot.com/" class="blogspot">
-                <button class="btn-wrapper__liquid--fill liquid">
-                  Read More
-                </button>
-              </a>
-            </div>
-          </div>
-          <div class="col-1-of-2">
-            <div class="composition">
-              <img
-                src="img/nat-1-large.jpg"
-                alt="Photo 1"
-                class="composition__photo composition__photo--p1"
-              />
-              <img
-                src="img/nat-2-large.jpg"
-                alt="Photo 2"
-                class="composition__photo composition__photo--p2"
-              />
-              <img
-                src="img/nat-3-large.png"
-                alt="Photo 3"
-                class="composition__photo composition__photo--p3"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-skills" id="section-skills">
-        <div class="u-center-text u-margin-bottom-big">
-          <h2 class="heading-secondary-2">
-            What Skills do i have?
-          </h2>
-        </div>
-
-        <div class="row">
-          <div class="col-1-of-3">
-            <div class="skill-card">
-              <h3 class="skill-card__heading">Android</h3>
-              <div class="skill-card__skillbar">
-                <p class="skill-card__skillbar-p u-margin-bottom-small">Java</p>
-                <p class="skill-card__skillbar-p u-margin-bottom-medium">80%</p>
-                <div class="skill-card__skillbar--percentage">
-                  <div class="skill-card__skillbar--percentage--level-1"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-1-of-3">
-            <div class="skill-card">
-              <h3 class="skill-card__heading">Human</h3>
-              <div class="skill-card__skillbar">
-                <p class="skill-card__skillbar-p u-margin-bottom-small">
-                  Homo-Sapien
-                </p>
-                <p class="skill-card__skillbar-p u-margin-bottom-medium">
-                  100%
-                </p>
-                <div class="skill-card__skillbar--percentage">
-                  <div class="skill-card__skillbar--percentage--level-2"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-1-of-3">
-            <div class="skill-card">
-              <h3 class="skill-card__heading">Web-Dev</h3>
-              <div class="skill-card__skillbar">
-                <p class="skill-card__skillbar-p u-margin-bottom-small">
-                  SASS?
-                </p>
-                <p class="skill-card__skillbar-p u-margin-bottom-medium">60%</p>
-                <div class="skill-card__skillbar--percentage">
-                  <div class="skill-card__skillbar--percentage--level-3"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-work" id="section-work">
-        <div class="u-center-text u-margin-bottom-big">
-          <h2 class="heading-secondary">
-            the kind of stuff i design
-          </h2>
-        </div>
-
-        <div class="row">
-          <div class="col-1-of-3">
-            <div class="card">
-              <div class="card__side card__side--front">
-                <div class="card__picture card__picture--1">
-                  &nbsp;
-                </div>
-                <h4 class="card__heading">
-                  <span class="card__heading-span card__heading-span--1"
-                    >Blazingly Fast & Responsive</span
-                  >
-                </h4>
-                <div class="card__details">
-                  <ul>
-                    <li>Faster than Flash</li>
-                    <li>The most Responsive Ever</li>
-                    <li>Latest Jetpack Library</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card__side card__side--back card__side--back-1">
-                <div class="card__cta">
-                  <div class="card__price-box">
-                    <p class="card__price-only">Charles De Gaulle</p>
-                    <p class="card__price-value">
-                      You have to be fast on your feet and adaptive or else a
-                      strategy is useless.
-                    </p>
-                  </div>
-                  <a href="#section-book" class="btn btn--white">Contact Me!</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-1-of-3">
-            <div class="card">
-              <div class="card__side card__side--front">
-                <div class="card__picture card__picture--2">
-                  &nbsp;
-                </div>
-                <h4 class="card__heading">
-                  <span class="card__heading-span card__heading-span--2"
-                    >Minimalistic & a Clean UI</span
-                  >
-                </h4>
-                <div class="card__details">
-                  <ul>
-                    <li>The Minimal Look</li>
-                    <li>A Better and Cleaner UI</li>
-                    <li>With Enhanced Performance</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card__side card__side--back card__side--back-2">
-                <div class="card__cta">
-                  <div class="card__price-box">
-                    <p class="card__price-only">Allen Benny</p>
-                    <p class="card__price-value">
-                      A better UI can win many hearts. &hearts;
-                    </p>
-                  </div>
-                  <a href="#section-book" class="btn btn--white">Contact Me!</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-1-of-3">
-            <div class="card">
-              <div class="card__side card__side--front">
-                <div class="card__picture card__picture--3">
-                  &nbsp;
-                </div>
-                <h4 class="card__heading">
-                  <span class="card__heading-span card__heading-span--3"
-                    >Something you'll love</span
-                  >
-                </h4>
-                <div class="card__details">
-                  <ul>
-                    <li>100% Client Satisfaction</li>
-                    <li>Realtime Database suport</li>
-                    <li>Build over 100+ Apps</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card__side card__side--back card__side--back-3">
-                <div class="card__cta">
-                  <div class="card__price-box">
-                    <p class="card__price-only">Lucille Ball</p>
-                    <p class="card__price-value">
-                      Love yourself first and everything falls into line.
-                    </p>
-                  </div>
-                  <a href="#section-book" class="btn btn--white">Contact Me!</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Story Section -->
-      <section class="section-stories" id="section-stories">
-        <div class="bg-video">
-          <video class="bg-video__content" autoplay muted loop>
-            <source src="img/video.mp4" type="video/mp4" />
-            <source src="img/video.webm" type="video/webm" />
-            YOURBROWSER ISN'T SUPPORTED
-          </video>
-        </div>
-        <div class="u-center-text u-margin-bottom-big">
-          <h2 class="heading-secondary">
-            I make people genuinly happy
-          </h2>
-        </div>
-
-        <div class="row">
-          <div class="story">
-            <figure class="story__shape">
-              <img
-                class="story__image"
-                src="img/nat-8.png"
-                alt="person on a tour"
-              />
-              <figcaption class="story__caption">Renta Shoot</figcaption>
-            </figure>
-            <div class="story__text">
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                I got the best App i ever could
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-                placeat soluta similique sed voluptates itaque magnam
-                reprehenderit, repellendus, adipisci tempore provident! Nam
-                perferendis eos nulla aliquid obcaecati animi odit iste. Unde
-                placeat soluta similique sed voluptates itaque magnam
-                reprehenderit.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="row">
-            <div class="story">
-                <figure class="story__shape">
-                    <img class="story__image" src="img/nat-9.png" alt="person on a tour">
-                    <figcaption class="story__caption">Jack Wilson</figcaption>
-                </figure>
-                <div class="story__text">
-                    <h3 class="heading-tertiary u-margin-bottom-small">
-                        My life is completely different now
-                    </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Unde placeat soluta similique sed voluptates itaque magnam reprehenderit, repellendus,
-                        adipisci tempore provident! Nam perferendis eos nulla aliquid obcaecati animi odit iste.
-                        Unde placeat soluta similique sed voluptates itaque magnam reprehenderit.
-                    </p>
-                </div>
-            </div>
-        </div>  -->
-      </section>
-      <section class="section-book" id="section-book">
-        <div class="book__content">
-          <div class="book__content-left">
-            <img
-              src="img/suit.svg"
-              alt="Suitcase Icon"
-              class="book__content-left-icon u-margin-bottom-small"
-            />
-            <h3 class="heading-tertiary-2">Want to work together?</h3>
-            <p class="paragraph-2">Great! Tell about your project</p>
-            <a href="#popup" class="book__content-left-link">
-              <img
-                src="img/right.svg"
-                alt="Back Icon"
-                class="book__content-left-icon-1"
-              />
-            </a>
-          </div>
-          <div class="book__content-right">
-            <img
-              src="img/map.svg"
-              alt="Map Icon"
-              class="book__content-right-icon u-margin-bottom-small"
-            />
-            <h3 class="heading-tertiary-1">Contact Me?</h3>
-            <p class="paragraph-1">Great! Tell about your project</p>
-            <a href="#popup" class="book__content-right-link">
-              <img
-                src="img/right.svg"
-                alt="Back Icon"
-                class="book__content-right-icon-1"
-              />
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer__logo-box">
-        <picture class="footer__logo1">
-          <source
-            srcset="img/logo-small.png 1x, img/logo-small@2x.png 2x"
-            media="(max-width: 37.5em)"
-            src="img/logo-small@2x.png"
-            class="footer__logo"
-          />
-          <img
-            srcset="img/logo-big.png 1x, img/logo-big@2x.png 2x"
-            alt="Full Logo"
-            src="img/logo-big@2x.png"
-            class="footer__logo"
-          />
-        </picture>
-        <!-- <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full Logo"> -->
+  <main>
+    <section class="section-about" id="section-about">
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">
+          What do i actually do ?
+        </h2>
       </div>
+
       <div class="row">
         <div class="col-1-of-2">
-          <div class="footer__navigation">
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a href="#section-about" class="footer__link">About Me</a>
-              </li>
-              <li class="footer__item">
-                <a href="#section-skills" class="footer__link">Skills</a>
-              </li>
-              <li class="footer__item">
-                <a href="#section-work" class="footer__link">My Work</a>
-              </li>
-              <li class="footer__item">
-                <a href="#section-stories" class="footer__link">Stories</a>
-              </li>
-              <li class="footer__item">
-                <a href="#section-book" class="footer__link">Contact Me</a>
-              </li>
-            </ul>
+          <h3 class="heading-tertiary u-margin-bottom-small">
+            You're going to fall in love with my work
+          </h3>
+          <p class="paragraph">
+            I usually call myself an <strong>ardent learner</strong>, (not bragging) but i do love to learn new things,
+            I don&#39;t want my any day to go without learning something new, even though it&#39;s one small thing, this
+            spirit of mine helps me to keep going and <strong>excel in everything</strong>.
+          </p>
+          <!-- <h3 class="heading-tertiary u-margin-bottom-small">I am someone you wish you never met you'll fall for me</h3> -->
+          <p class="paragraph">
+            I usaully make Apps for mobile phones whether it be <strong>iOS or Android</strong> I can make Apps for
+            them. I am well versed with Native Java Android Development and Flutter. The other thing which interests me
+            would be Food, Yes I am a Foodie and trust me I can <strong>COOK</strong> XD. As I always say I am
+            <strong>&#34;Imperfectly Perfect&#34;</strong>.
+          </p>
+          <!-- <a href="#" class="btn-text">Learn more &rarr;</a> -->
+          <div class="btn-wrapper">
+            <a href="https://officiallygod.github.io/material-projects/" class="blogspot">
+              <button class="btn-wrapper__liquid--fill liquid">
+                My Work
+              </button>
+            </a>
           </div>
         </div>
         <div class="col-1-of-2">
-          <p class="footer__copyright">
-            Made with love by Allen Benny, A Software Engineer from BMS
-            Institute of Technology, Bengaluru.
-            <br />
-            Copyright &copy; 2020
-          </p>
+          <div class="composition">
+            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1" />
+            <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2" />
+            <img src="img/nat-3-large.png" alt="Photo 3" class="composition__photo composition__photo--p3" />
+          </div>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <!-- POPUP -->
-    <div class="popup" id="popup">
-      <div class="popup__content">
-        <div class="row">
-          <div class="book">
-            <div class="book__form">
-              <form action="#" class="form">
-                <a href="#section-tours" class="popup__close">&times;</a>
-                <div class="u-margin-bottom-none">
-                  <h2 class="heading-secondary">
-                    Wanna contact me ?
-                  </h2>
-                </div>
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Full Name"
-                    id="name"
-                    required
-                  />
-                  <label for="name" class="form__label">Full Name</label>
-                </div>
-                <div class="form__group">
-                  <input
-                    type="email"
-                    class="form__input"
-                    placeholder="Email Address"
-                    id="email"
-                    required
-                  />
-                  <label for="email" class="form__label">Email Address</label>
-                </div>
+    <section class="section-skills" id="section-skills">
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary-2">
+          What Skills do i have?
+        </h2>
+      </div>
 
-                <div class="form__group u-margin-bottom-mediumbig">
-                  <div class="form__radio-group">
-                    <input
-                      type="radio"
-                      class="form__radio-input"
-                      id="small"
-                      name="size"
-                    />
-                    <label for="small" class="form__radio-label">
-                      <span class="form__radio-button"></span>
-                      Individual</label
-                    >
-                  </div>
-                  <div class="form__radio-group">
-                    <input
-                      type="radio"
-                      class="form__radio-input"
-                      id="large"
-                      name="size"
-                    />
-                    <label for="large" class="form__radio-label">
-                      <span class="form__radio-button"></span>
-                      Company</label
-                    >
-                  </div>
-                </div>
-
-                <div class="form__group">
-                  <button
-                    onclick="writeUserData()"
-                    class="btn btn--green"
-                    id="firebase-update"
-                  >
-                    Next Step &rarr;
-                  </button>
-                </div>
-              </form>
+      <div class="row">
+        <div class="col-1-of-3">
+          <div class="skill-card">
+            <h3 class="skill-card__heading">Android</h3>
+            <div class="skill-card__skillbar">
+              <p class="skill-card__skillbar-p u-margin-bottom-small">Java</p>
+              <p class="skill-card__skillbar-p u-margin-bottom-medium">80%</p>
+              <div class="skill-card__skillbar--percentage">
+                <div class="skill-card__skillbar--percentage--level-1"></div>
+              </div>
             </div>
+          </div>
+        </div>
+
+        <div class="col-1-of-3">
+          <div class="skill-card">
+            <h3 class="skill-card__heading">Human</h3>
+            <div class="skill-card__skillbar">
+              <p class="skill-card__skillbar-p u-margin-bottom-small">
+                Homo-Sapien
+              </p>
+              <p class="skill-card__skillbar-p u-margin-bottom-medium">
+                100%
+              </p>
+              <div class="skill-card__skillbar--percentage">
+                <div class="skill-card__skillbar--percentage--level-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-1-of-3">
+          <div class="skill-card">
+            <h3 class="skill-card__heading">Web-Dev</h3>
+            <div class="skill-card__skillbar">
+              <p class="skill-card__skillbar-p u-margin-bottom-small">
+                SASS?
+              </p>
+              <p class="skill-card__skillbar-p u-margin-bottom-medium">60%</p>
+              <div class="skill-card__skillbar--percentage">
+                <div class="skill-card__skillbar--percentage--level-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-work" id="section-work">
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">
+          the kind of stuff i design
+        </h2>
+      </div>
+
+      <div class="row">
+        <div class="col-1-of-3">
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__picture card__picture--1">
+                &nbsp;
+              </div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--1">Blazingly Fast & Responsive</span>
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>Faster than Flash</li>
+                  <li>The most Responsive Ever</li>
+                  <li>Latest Jetpack Library</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-1">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">Charles De Gaulle</p>
+                  <p class="card__price-value">
+                    You have to be fast on your feet and adaptive or else a
+                    strategy is useless.
+                  </p>
+                </div>
+                <a href="#section-book" class="btn btn--white">Contact Me!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-1-of-3">
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__picture card__picture--2">
+                &nbsp;
+              </div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--2">Minimalistic & a Clean UI</span>
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>The Minimal Look</li>
+                  <li>A Better and Cleaner UI</li>
+                  <li>With Enhanced Performance</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-2">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">Allen Benny</p>
+                  <p class="card__price-value">
+                    A better UI can win many hearts. &hearts;
+                  </p>
+                </div>
+                <a href="#section-book" class="btn btn--white">Contact Me!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-1-of-3">
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__picture card__picture--3">
+                &nbsp;
+              </div>
+              <h4 class="card__heading">
+                <span class="card__heading-span card__heading-span--3">Something you'll love</span>
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>100% Client Satisfaction</li>
+                  <li>Realtime Database suport</li>
+                  <li>Build over 100+ Apps</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-3">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">Lucille Ball</p>
+                  <p class="card__price-value">
+                    Love yourself first and everything falls into line.
+                  </p>
+                </div>
+                <a href="#section-book" class="btn btn--white">Contact Me!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Story Section -->
+    <section class="section-stories" id="section-stories">
+      <div class="bg-video">
+        <video class="bg-video__content" autoplay muted loop>
+          <source src="img/video.mp4" type="video/mp4" />
+          <source src="img/video.webm" type="video/webm" />
+          YOURBROWSER ISN'T SUPPORTED
+        </video>
+      </div>
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">
+          Making Clients Happy
+        </h2>
+      </div>
+
+      <div class="row">
+        <div class="story">
+          <figure class="story__shape">
+            <img class="story__image" src="img/nat-8.png" alt="person on a tour" />
+            <figcaption class="story__caption">Renta Shoot</figcaption>
+          </figure>
+          <div class="story__text">
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              The best App i could have Imagined
+            </h3>
+            <p>
+              The total process of working with Allen is smooth and simple, he brings out his ideas on table and the
+              does exactly what he says. His ideology of a Minimalistic design is noteworthy.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="story">
+          <figure class="story__shape">
+            <img class="story__image_1" src="img/nat-8-1.png" alt="person on a tour">
+            <figcaption class="story__caption">GILITZ</figcaption>
+          </figure>
+          <div class="story__text">
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              The app blew my mind
+            </h3>
+            <p>To be honest i wasn't expecting such a good app, The UI and the functionality is top-notch and trust me
+              this is the best app i could have ever got. This whole process was much of an hassle-free experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-book" id="section-book">
+      <div class="book__content">
+        <div class="book__content-left">
+          <img src="img/suit.svg" alt="Suitcase Icon" class="book__content-left-icon u-margin-bottom-small" />
+          <h3 class="heading-tertiary-2">Want to work together?</h3>
+          <p class="paragraph-2">Great! Tell about your project</p>
+          <a href="#popup" class="book__content-left-link">
+            <img src="img/right.svg" alt="Back Icon" class="book__content-left-icon-1" />
+          </a>
+        </div>
+        <div class="book__content-right">
+          <img src="img/map.svg" alt="Map Icon" class="book__content-right-icon u-margin-bottom-small" />
+          <h3 class="heading-tertiary-1">Contact Me?</h3>
+          <p class="paragraph-1">Great! Tell about your project</p>
+          <a href="#popup" class="book__content-right-link">
+            <img src="img/right.svg" alt="Back Icon" class="book__content-right-icon-1" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__logo-box">
+      <picture class="footer__logo1">
+        <source srcset="img/logo-small.png 1x, img/logo-small@2x.png 2x" media="(max-width: 37.5em)"
+          src="img/logo-small@2x.png" class="footer__logo" />
+        <img srcset="img/logo-big.png 1x, img/logo-big@2x.png 2x" alt="Full Logo" src="img/logo-big@2x.png"
+          class="footer__logo" />
+      </picture>
+      <!-- <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full Logo"> -->
+    </div>
+    <div class="row">
+      <div class="col-1-of-2">
+        <div class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#section-about" class="footer__link">About Me</a>
+            </li>
+            <li class="footer__item">
+              <a href="#section-skills" class="footer__link">Skills</a>
+            </li>
+            <li class="footer__item">
+              <a href="#section-work" class="footer__link">My Work</a>
+            </li>
+            <li class="footer__item">
+              <a href="#section-stories" class="footer__link">Stories</a>
+            </li>
+            <li class="footer__item">
+              <a href="#section-book" class="footer__link">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-1-of-2">
+        <p class="footer__copyright">
+          Made with love by Allen Benny, A Software Engineer from BMS
+          Institute of Technology, Bengaluru.
+          <br />
+          Copyright &copy; 2020
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- POPUP -->
+  <div class="popup" id="popup">
+    <div class="popup__content">
+      <div class="row">
+        <div class="book">
+          <div class="book__form">
+            <form action="#" class="form">
+              <a href="#section-tours" class="popup__close">&times;</a>
+              <div class="u-margin-bottom-none">
+                <h2 class="heading-secondary">
+                  Wanna contact?
+                </h2>
+              </div>
+              <div class="form__group">
+                <input type="text" class="form__input" placeholder="Full Name" id="name" required />
+                <label for="name" class="form__label">Full Name</label>
+              </div>
+              <div class="form__group">
+                <input type="email" class="form__input" placeholder="Email Address" id="email" required />
+                <label for="email" class="form__label">Email Address</label>
+              </div>
+
+              <div class="form__group u-margin-bottom-mediumbig">
+                <div class="form__radio-group">
+                  <input type="radio" class="form__radio-input" id="small" name="size" />
+                  <label for="small" class="form__radio-label">
+                    <span class="form__radio-button"></span>
+                    Individual</label>
+                </div>
+                <div class="form__radio-group">
+                  <input type="radio" class="form__radio-input" id="large" name="size" />
+                  <label for="large" class="form__radio-label">
+                    <span class="form__radio-button"></span>
+                    Company</label>
+                </div>
+              </div>
+
+              <div class="form__group">
+                <button onclick="writeUserData()" class="btn btn--green" id="firebase-update">
+                  <a class="button form__group_submit" href="mailto:allen.officially@gmail.com">Next Step
+                    &rarr;</a>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/7.19.1/firebase-app.js"></script>
+  </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.19.1/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
 
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
-  </body>
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+</body>
+
 </html>
