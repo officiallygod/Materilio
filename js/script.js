@@ -59,9 +59,26 @@ async function submitFormFunc() {
         "email": email.value
     };
 
-    const options = {
+    let headers = new Headers();
+
+    headers.append( 'Access-Control-Allow-Origin', 'http://127.0.0.1:5500' );
+    headers.append( 'Access-Control-Allow-Credentials', 'true' );
+
+    fetch( 'https://konnect-js.herokuapp.com/konnectsnd', {
+
         method: 'POST',
-        form: dataObject
+        body: {
+            "uid": "DfDMxNhG9nbgvclOh4YxjQ9NX9H2",
+            "name": name.value,
+            "email": email.value
+        }
+    } )
+
+
+    const options = {
+        header: headers,
+        method: 'POST',
+        form: JSON.stringify( dataObject )
     };
 
     var data = await fetch( Url, options ).then( response => {
