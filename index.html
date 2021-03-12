@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <base href="https://materilio-allen.firebaseapp.com/">
+  <!-- <base href="https://materilio-allen.firebaseapp.com/"> -->
 
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,200" rel="stylesheet" />
 
@@ -34,36 +34,6 @@
 </head>
 
 <body>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-    https://firebase.google.com/docs/web/setup#available-libraries -->
-
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyDlkqiM3w6o5r9sHVF1cBx5qkca_7wWlFs",
-      authDomain: "materilio.firebaseapp.com",
-      databaseURL: "https://materilio.firebaseio.com",
-      projectId: "materilio",
-      storageBucket: "materilio.appspot.com",
-      messagingSenderId: "624734437087",
-      appId: "1:624734437087:web:b892042a97aa9d120bb36a",
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-
-    function writeUserData() {
-      firebase
-        .database()
-        .ref("users/" + userId)
-        .set({
-          username: document.getElementById("name"),
-          useremail: document.getElementById("email"),
-        });
-    }
-  </script>
   <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar__inner">
@@ -179,8 +149,8 @@
           <div class="skill-card">
             <h3 class="skill-card__heading">Android</h3>
             <div class="skill-card__skillbar">
-              <p class="skill-card__skillbar-p u-margin-bottom-small">Java</p>
-              <p class="skill-card__skillbar-p u-margin-bottom-medium">80%</p>
+              <p class="skill-card__skillbar-p u-margin-bottom-small">Java | Flutter</p>
+              <p class="skill-card__skillbar-p u-margin-bottom-medium">90%</p>
               <div class="skill-card__skillbar--percentage">
                 <div class="skill-card__skillbar--percentage--level-1"></div>
               </div>
@@ -210,9 +180,9 @@
             <h3 class="skill-card__heading">Web-Dev</h3>
             <div class="skill-card__skillbar">
               <p class="skill-card__skillbar-p u-margin-bottom-small">
-                SASS?
+                FRONT-END | NODE | MONGO
               </p>
-              <p class="skill-card__skillbar-p u-margin-bottom-medium">60%</p>
+              <p class="skill-card__skillbar-p u-margin-bottom-medium">80%</p>
               <div class="skill-card__skillbar--percentage">
                 <div class="skill-card__skillbar--percentage--level-3"></div>
               </div>
@@ -325,6 +295,25 @@
         </div>
       </div>
     </section>
+    <section class="section-mywork" id="section-mywork">
+      <div class="u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">
+          Check Out my Work!
+        </h2>
+      </div>
+      <div class="wrapper-body">
+        <a style="text-decoration: none;" href="https://officiallygod.github.io/material-projects/">
+          <div class="wrapperly">
+            <div class="cardly">
+              <h1 class="textly">
+                <span class="enclosedly">MY</span>WORK
+              </h1>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
     <!-- Story Section -->
     <section class="section-stories" id="section-stories">
       <div class="bg-video">
@@ -477,8 +466,8 @@
               </div>
 
               <div class="form__group">
-                <button onclick="writeUserData()" class="btn btn--green" id="firebase-update">
-                  <a class="button form__group_submit" href="mailto:allen.officially@gmail.com">Next Step
+                <button onclick="submitFormFunc()" class="btn btn--green btn--submit" id="SubmitBtn">
+                  <a class="button form__group_submit" href="">Next Step
                     &rarr;</a>
                 </button>
               </div>
@@ -488,15 +477,7 @@
       </div>
     </div>
   </div>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="/__/firebase/7.19.1/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="/__/firebase/7.19.1/firebase-analytics.js"></script>
-
-  <!-- Initialize Firebase -->
-  <script src="/__/firebase/init.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </body>
 
 </html>
