@@ -45,7 +45,8 @@ $( document ).ready( function () {
     } );
 } );
 
-function submitFormFunc() {
+async function submitFormFunc() {
+
     console.log( "HUHUH" );
     var name = document.getElementById( "name" );
     var email = document.getElementById( "email" );
@@ -58,10 +59,12 @@ function submitFormFunc() {
         "email": email.value
     };
 
-    var data = fetch( Url, {
-        method: "POST",
+    const options = {
+        method: 'POST',
         form: dataObject
-    } ).then( response => {
+    };
+
+    var data = await fetch( Url, options ).then( response => {
 
         console.log( "IT RANNN" );
         console.log( response.text() );
