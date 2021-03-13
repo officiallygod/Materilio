@@ -58,15 +58,18 @@ async function submitFormFunc() {
         "email": email.value
     };
 
-    const options = {
+    var myHeaders = new Headers();
+    myHeaders.append( "Content-Type", "application/json" );
+
+    var raw = JSON.stringify( dataObject );
+
+    var requestOptions = {
         method: 'POST',
-        body: dataObject
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
     };
 
-    await fetch( Url, options ).then( response => {
+    fetch( Url, requestOptions ).then( response => response.text() ).then( result => console.log( result ) ).catch( error => console.log( 'error', error ) );
 
-        console.log( "IT RANNN" );
-        console.log( response.text() );
-
-    } );
 }
