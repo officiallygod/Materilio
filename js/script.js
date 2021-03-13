@@ -70,6 +70,9 @@ async function submitFormFunc() {
         redirect: 'follow'
     };
 
-    fetch( Url, requestOptions ).then( response => response.text() ).then( result => console.log( result ) ).catch( error => console.log( 'error', error ) );
+    fetch( Url, requestOptions ).then( response => {
+        response.text();
+        window.alert( "Thanks For Contacting Me :)" )
+    } ).then( result => console.log( result ) ).catch( error => console.log( 'error', error ) );
 
 }
