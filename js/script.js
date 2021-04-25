@@ -47,6 +47,8 @@ $( document ).ready( function () {
 
 async function submitFormFunc() {
 
+    jQuery( ".loader_div" ).show();
+
     var name = document.getElementById( "name" );
     var email = document.getElementById( "email" );
 
@@ -73,6 +75,9 @@ async function submitFormFunc() {
     fetch( Url, requestOptions ).then( response => {
         response.text();
         window.alert( "Thanks For Contacting Me :)" )
-    } ).then( result => console.log( result ) ).catch( error => console.log( 'error', error ) );
+    } ).then( result => console.log( result ) ).catch( error => console.log( 'error', error ) ).then( function () {
+        jQuery( ".loader_div" ).hide();
+    } );
+
 
 }

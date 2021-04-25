@@ -2075,3 +2075,15 @@ only screen and (hover: none) {
     will-change: transform;
     transition: .3s transform cubic-bezier(.25, .46, .45, 1);
 }
+
+.loader_div {
+    position: absolute;
+    top: 0;
+    bottom: 0%;
+    left: 0;
+    right: 0%;
+    z-index: 99;
+    opacity: 0.7;
+    display: none;
+    background: lightgrey url('../img/loader.gif') center center no-repeat;
+}
